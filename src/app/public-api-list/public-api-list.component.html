@@ -1,0 +1,13 @@
+<div *ngIf="apiList$ | async as apiList">
+    <h1>Public API List</h1>
+    <h3>Total Count:</h3>
+    <p>{{ apiList.count }}</p>
+</div>
+
+<div *ngIf="apiList$ | async as apiList">
+    <div *ngFor="let api of apiList.entries">
+        <p><strong>API:</strong> {{ api.API }}</p>
+        <p><strong>Description:</strong> {{ api.Description }}</p>
+        <p><strong>Category:</strong> {{ api.Category }}</p>
+    </div>
+</div>
